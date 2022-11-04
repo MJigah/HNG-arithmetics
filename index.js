@@ -41,7 +41,7 @@ app.use(
     })
   );
   app.use(express.json());
-app.use("/api", arithRoutes);
+app.use("/api/calculate", arithRoutes);
 
 app.get("/favicon.ico", function (req, res) {
   res.status(204);

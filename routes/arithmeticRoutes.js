@@ -30,18 +30,18 @@ const router = express.Router()
 
 
 //GET: seed to db
-router.get(
-    "/seed",
-    (async (req, res) => {
-      const reviews = await User.insertMany(mealDb.user);
-      // await Vendor.deleteMany()
-      res.send(reviews);
-    })
-  );
+// router.get(
+//     "/seed",
+//     (async (req, res) => {
+//       const reviews = await User.insertMany(mealDb.user);
+//       // await Vendor.deleteMany()
+//       res.send(reviews);
+//     })
+//   );
 
 /**
  * @swagger
- * '/api':
+ * '/api/calculate':
  *  post:
  *   summary: Calculate arithmetic
  *   tags: [User]

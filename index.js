@@ -46,10 +46,10 @@ const specs = swaggerJsDoc(options)
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs))
 app.use("/api", arithRoutes);
 
-// app.get("/favicon.ico", function (req, res) {
-//   res.status(204);
-//   res.end();
-// });
+app.get("/favicon.ico", function (req, res) {
+  res.status(204);
+  res.end();
+});
 
 app.get("/", (req, res) => {
   res.json(getData);

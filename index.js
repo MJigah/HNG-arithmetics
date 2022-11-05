@@ -48,9 +48,6 @@ app.get("/favicon.ico", function (req, res) {
   res.end();
 });
 
-app.get("/", (req, res) => {
-  res.json(getData);
-});
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);

@@ -13,6 +13,9 @@ const ARITHMETIC_TYPE = {
 
 const arithmeticHandler = (req, res) => {
     const { operation_type, x, y} = req.body;
+    if(typeof x !== 'number' || typeof y !== 'number'){
+        res.status(400).json({message: "Enter valid values for x, y"})
+    }
     let result;
     switch(operation_type){
         case ARITHMETIC_TYPE.ADD:
